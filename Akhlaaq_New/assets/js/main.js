@@ -73,3 +73,22 @@ sr.reveal(`.info`, {origin: 'left', delay:800})
 sr.reveal(`.skills`, {origin: 'left', delay:1000})
 sr.reveal(`.about`, {origin: 'right', delay:1200})
 sr.reveal(`.projects__card, .services__card, .experience__card`, {interval: 100})
+
+
+
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const reviews = document.querySelectorAll('.review');
+let currentReviewIndex = 0; 
+
+nextBtn.addEventListener('click', () => {
+  reviews[currentReviewIndex].style.display = 'none';
+  currentReviewIndex = (currentReviewIndex + 1) % reviews.length; 
+  reviews[currentReviewIndex].style.display = 'flex'; 
+});
+
+prevBtn.addEventListener('click', () => {
+  reviews[currentReviewIndex].style.display = 'none';
+  currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length; 
+  reviews[currentReviewIndex].style.display = 'flex'; 
+});

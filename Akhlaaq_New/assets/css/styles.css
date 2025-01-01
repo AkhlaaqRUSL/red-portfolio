@@ -163,8 +163,8 @@ img {
 }
 
 .nav__link{
-  width: 2.5rem;
-  height: 2.5rem ;
+  width: 2.0rem;
+  height: 2.0rem ;
   background-color: transparent;
   color: var(--white-color);
   font-size: 1.5rem;
@@ -710,7 +710,7 @@ img {
   
 
   .nav{
-    padding: 1rem;
+    padding: 0.25rem;
   }
 }
 
@@ -943,4 +943,77 @@ img {
   .scrollup{
     right: 4rem;
   }
+}
+
+
+
+
+.review__image {
+  border-radius: 50%; 
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+}
+.review-container {
+  overflow: hidden; 
+}
+
+.review {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+ gap: 2rem;
+}
+
+/* Hide all reviews except the first one */
+.review:not(:first-child) {
+  display: none; 
+} 
+
+/* Style the buttons */
+.prev-btn, .next-btn {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  margin: 1rem 0; /* Add some spacing around the buttons */
+  display: inline-block;
+}
+
+.prev-btn {
+  margin-right: 1rem; /* Add spacing between buttons */
+}
+
+.review-section {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  grid-gap: 2rem; /* Adjust gap between cards as needed */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  text-align: center;
+}
+
+.review-card {
+  background-color: var(--container-color);
+  padding: 4rem 1.5rem 3.5rem 1.5rem;
+  border-radius: 2rem;
+  text-align: center; 
+}
+
+.review-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem; 
+}
+
+.review-navigation button {
+  background: transparent; 
+  border: none;
+  cursor: pointer;;
+}
+
+.review-navigation button:hover i {
+  color: hsl(265, 80%, 49%); /* Change fill color on hover */
 }
